@@ -1,0 +1,15 @@
+<div>
+    <button (click)="onUserSelected()" >
+        <!-- using regualr input decorators -->
+        <img [src]="imgPath" [alt]="user.name">
+        <span>{{user.name}}</span>
+        
+        <!-- when using signal for selected user -->
+        <!-- <img [src]="imgPath()" [alt]="selectedUser().name">
+        <span>{{selectedUser().name}}</span> -->
+
+        <!-- when using input singal -->
+        <!-- <img [src]="imgPath()" [alt]="name()">
+        <span>{{name()}}</span> -->
+    </button>
+</div>
