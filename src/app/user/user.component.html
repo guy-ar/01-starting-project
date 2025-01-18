@@ -1,5 +1,5 @@
 <div>
-    <button (click)="onUserSelected()" >
+    <button (click)="onUserSelected()" [class.active]="selected">
         <!-- using regualr input decorators -->
         <img [src]="imgPath" [alt]="user.name">
         <span>{{user.name}}</span>

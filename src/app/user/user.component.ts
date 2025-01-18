@@ -1,6 +1,6 @@
 import { Component, computed, Input, signal, input, Output, EventEmitter, output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
-import { User } from '../model/user.model';
+import { type User } from '../model/user.model';
 
 const randoIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 @Component({
@@ -16,7 +16,7 @@ export class UserComponent {
   // @Input({required : true}) name!: string;
 
   @Input({required : true}) user!: User;
-  
+  @Input({required :true}) selected!: boolean;
   @Output() selectUser = new EventEmitter<string>();
 
   // option with output new mode - still event emitter

@@ -26,4 +26,11 @@ export class AppComponent {
     }
     return undefined;
   }
+
+  get selectedUserId() {
+    if (this.selectedUser) {
+      return this.selectedUser.id;
+    }
+    return '-1';
+  }
 }
