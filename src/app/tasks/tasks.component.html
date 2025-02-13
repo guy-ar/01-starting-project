@@ -1,5 +1,6 @@
 @if (isAddingTask) {
-    <app-new-task (cancel)="onCancelAddTask()" (addTask)="onAddTask($event)"/>
+    <!-- <app-new-task (cancel)="onCancelAddTask()" (addTask)="onAddTask($event)" /> -->
+    <app-new-task (close)="onCancelAddTask()" [userId]="userId"/> <!-- passing userId to the child component, and removing the addTaks output-->
 }
 <Section id="tasks">
     <header>
@@ -13,7 +14,8 @@
     <ul>
         @for (task of selectedUserTasks; track task.id) {
             <li >
-                <app-task [task]="task" (completeTask)="onCompleteTask($event)"/>
+                <!-- <app-task [task]="task" (completeTask)="onCompleteTask($event)"/> -->
+                <app-task [task]="task"/>
             </li>
         }
     </ul>
