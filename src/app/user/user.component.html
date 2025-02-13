@@ -1,4 +1,4 @@
-<div>
+<app-card>
     <button (click)="onUserSelected()" [class.active]="selected">
         <!-- using regualr input decorators -->
         <img [src]="imgPath" [alt]="user.name">
@@ -12,4 +12,4 @@
         <!-- <img [src]="imgPath()" [alt]="name()">
         <span>{{name()}}</span> -->
     </button>
-</div>
+</app-card>
