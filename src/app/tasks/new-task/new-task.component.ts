@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output, signal, output, Inject, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { type NewTask } from '../../model/task.model';
+import { TaskService } from '../tasks.service';
 
 @Component({
   standalone: true,
@@ -18,7 +19,8 @@ export class NewTaskComponent {
   enteredTitle = '';
   enteredSummary = '';
   enteredDate = '';
-  private taskservice = Inject('TaskService');
+  constructor(private taskservice: TaskService) {}
+  
   
   onCancel() {
     //this.cancel.emit();
